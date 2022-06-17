@@ -47,10 +47,23 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Chọn "Logout" bên dưới nếu bạn muốn kết thúc phiên đăng nhập của mình.</div>
+                <div class="modal-body">
+                <p>Chọn "Logout" bên dưới nếu bạn muốn kết thúc phiên đăng nhập của mình.</p>
+                </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="@Url.Action("Login","Account")">Logout</a>
+                    @*<a class="btn btn-primary" href="@Url.Action("Login","Account")">Logout</a>*@
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a class="btn btn-primary" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                            </ul>
+                        }
+                    }
                 </div>
             </div>
         </div>
