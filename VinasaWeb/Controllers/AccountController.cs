@@ -52,6 +52,10 @@ namespace VinasaWeb.Controllers
             }
         }
 
+        public ActionResult Index()
+        {
+            return View();
+        }
         //
         // GET: /Account/Login
         [AllowAnonymous]
@@ -60,6 +64,7 @@ namespace VinasaWeb.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+
 
         //
         // POST: /Account/Login
@@ -76,6 +81,7 @@ namespace VinasaWeb.Controllers
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            Console.WriteLine(result);
             switch (result)
             {
                 case SignInStatus.Success:
