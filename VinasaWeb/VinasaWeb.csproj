@@ -371,6 +371,7 @@
     <Content Include="vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Seminar\Index.cshtml" />
+    <Content Include="Views\Seminar\Create.cshtml" />
     <None Include="Views\Shared\sbadmin.cshtml" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />

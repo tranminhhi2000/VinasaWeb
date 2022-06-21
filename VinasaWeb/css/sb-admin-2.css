@@ -4518,6 +4518,10 @@ input[type="button"].btn-block {
   border-bottom-left-radius: calc(0.35rem - 1px);
 }
 
+.card-header .left-content .button-lc:hover {
+    background-color: #051D65;
+}
+
 
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
