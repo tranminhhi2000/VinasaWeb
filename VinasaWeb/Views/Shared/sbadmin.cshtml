@@ -40,7 +40,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index", "Home")">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
@@ -351,7 +351,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Đăng xuất
                                 </a>
                             </div>
                         </li>
@@ -387,15 +387,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Bạn muốn đăng xuất?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Chọn "Logoff" để kết thúc phiên đăng nhập của bạn</p>
+                    <p>Chọn "Thoát" để kết thúc phiên đăng nhập của bạn</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy</button>
                     @*<a class="btn btn-primary" href="@Url.Action("Login","Account")">Logout</a>*@
                     @if (Request.IsAuthenticated)
                     {
@@ -403,7 +403,7 @@
                         {
                             @Html.AntiForgeryToken()
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="btn btn-primary" href="javascript:document.getElementById('logoutForm').submit()">Logoff</a></li>
+                                <li><a class="btn btn-primary" href="javascript:document.getElementById('logoutForm').submit()">Thoát</a></li>
                             </ul>
                         }
                     }
