@@ -4636,8 +4636,11 @@ input[type="button"].btn-block {
   margin-bottom: 0.75rem;
 }
 
-
-
+.left-content .button {
+    background: #F69928;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
 /*.action {
     display: flex !important;
     justify-content: space-around;
@@ -4660,7 +4663,6 @@ td > .action-item {
     font-size: 15px;
     list-style-type: none !important;
 }*/
-
 @media (min-width: 576px) {
     .card-group {
     display: flex;
@@ -9619,11 +9621,11 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #4e73df !important;
+    color: #19315D;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #224abe !important;
+    color: #19315D;
 }
 
 .text-secondary {
