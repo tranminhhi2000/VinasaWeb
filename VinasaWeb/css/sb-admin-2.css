@@ -1486,6 +1486,7 @@ pre code {
   width: 100%;
   margin-bottom: 1rem;
   color: #858796;
+  overflow-x: auto;
 }
 
 .table th,
@@ -4517,6 +4518,7 @@ input[type="button"].btn-block {
   border-bottom-left-radius: calc(0.35rem - 1px);
 }
 
+
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
   border-top: 0;
@@ -4634,8 +4636,33 @@ input[type="button"].btn-block {
   margin-bottom: 0.75rem;
 }
 
+
+
+/*.action {
+    display: flex !important;
+    justify-content: space-around;
+}
+
+.action > i {
+color: #000;
+}
+
+td > .action-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    list-style: none;
+    text-align: center;
+    font-size: 15px;
+    list-style-type: none !important;
+}*/
+
 @media (min-width: 576px) {
-  .card-group {
+    .card-group {
     display: flex;
     flex-flow: row wrap;
   }
