@@ -6,11 +6,11 @@
 }
 
 <style>
-    .form-field {
+@*    .form-field {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-    }
+    }*@
 
     .input-wrapper {
         display: flex;
@@ -95,8 +95,7 @@
     }
 
     .button-form {
-        float: right;
-        margin-right: 70px;
+        float: left;
     }
 
     .button:hover{
@@ -107,22 +106,22 @@
 
 <div class="container col-11 centerPage">
     <h5 class="heading">Thêm mới Hội Thảo</h5>
-    <form action="@Url.Action("CreateProduct")" class="form-field" method="post" enctype="multipart/form-data">
+    <form class="form-field" method="post" enctype="multipart/form-data">
         <div class="input-wrapper">
             <input type="text" id="tax" required>
-            <label for="tax">Mã số thuế</label>
+            <label for="tax">Tên Hội Thảo</label>
         </div>
 
         <div class="input-wrapper">
             <input type="text" required>
-            <label for="name">Tên Hội Thảo</label>
+            <label for="name">Thời Gian Diễn Ra</label>
         </div>
 
         <div class="input-wrapper">
             <input type="text" required>
-            <label for="name">Tên Đơn Vị</label>
+            <label for="name">Địa Điểm Diễn Ra</label>
         </div>
-
+        @*
         <div class="input-wrapper">
             <input type="text" required>
             <label for="name">Tên Người Tham Dự</label>
@@ -184,13 +183,15 @@
             <input type="text" required>
             <label for="name">Đăng Ký Vé Tham Dự</label>
         </div>
-
+        *@
     </form>
     <div class="button-form">
     <button class="button">Xác Nhận</button>
     <button class="button">Huỷ</button>
     </div>
 </div>
+
+
 
 
 

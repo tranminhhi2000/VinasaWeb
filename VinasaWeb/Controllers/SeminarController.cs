@@ -13,6 +13,12 @@ namespace VinasaWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult ViewList()
+        {
+            return View();
+        }
+
         public ActionResult Create()
         {
             return View();

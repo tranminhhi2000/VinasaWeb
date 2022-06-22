@@ -372,6 +372,7 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Seminar\Index.cshtml" />
     <Content Include="Views\Seminar\Create.cshtml" />
+    <Content Include="Views\Seminar\ViewList.cshtml" />
     <None Include="Views\Shared\sbadmin.cshtml" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
