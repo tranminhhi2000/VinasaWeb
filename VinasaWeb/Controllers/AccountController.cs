@@ -486,6 +486,17 @@ namespace VinasaWeb.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
+        
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        public ActionResult ListAccount()
+        {
+            return View();
+        }
         #endregion
     }
+
+
 }

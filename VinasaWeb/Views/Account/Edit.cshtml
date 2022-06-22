@@ -1,0 +1,266 @@
+﻿
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/sbadmin.cshtml";
+}
+
+<style>
+    .card-bet {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .input-wrapper {
+        display: flex;
+        position: relative;
+        line-height: 14px;
+        margin: 20px 10px;
+    }
+
+
+    label {
+        color: #bbb;
+        font-size: 11px;
+        text-transform: uppercase;
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        top: 14px;
+        padding: 0 2px;
+        pointer-events: none;
+        background: white;
+        transition: transform 100ms ease;
+        transform: translateY(-20px);
+    }
+
+
+    input {
+        font-size: 10px;
+        color: #555;
+        outline: none;
+        border: 1px solid #bbb;
+        padding: 10px 20px;
+        border-radius: 20px;
+        width: 600px;
+        position: relative;
+    }
+
+
+        input:invalid + label {
+            transform: translateY(0);
+        }
+
+        input:focus {
+            border-color: #E7870F;
+        }
+
+            input:focus + label {
+                color: #E7870F;
+                transform: translateY(-20px);
+            }
+
+    .heading {
+        color: #051D65;
+    }
+
+    .form-control {
+        font-size: 15px;
+        color: #555;
+        outline: none;
+        border: 1px solid #bbb;
+        border-radius: 20px;
+        width: 400px;
+    }
+
+        .form-control:focus {
+            border-color: #E7870F;
+        }
+
+    .address:focus {
+        color: #E7870F;
+    }
+
+    .button {
+        height: 40px;
+        width: 150px;
+        margin: 10px 10px;
+        background: #F69928;
+        color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+
+    .button-form {
+        float: right;
+        margin-right: 70px;
+    }
+
+    .button:hover {
+        background-color: #051D65;
+    }
+</style>
+
+<div class="row">
+    <div class="col-6">
+        <h5 class="heading">Sửa Thông Tin Hội Viên</h5>
+        <form action="@Url.Action("CreateProduct")" class="col-md-6" method="post" enctype="multipart/form-data">
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Mã số thuế</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Tên Tiếng Việt Của Công Ty</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Tên Tiếng Anh Của Công Ty</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Tên Viết Tắt</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Ngày Thành Lập</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="email" required>
+                <label for="name">Website</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="number" required>
+                <label for="name">Số Điện Thoại</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Email Công Ty</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Địa Chỉ Giao Dịch</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Địa Chỉ Ghi Trên Chứng Từ Tài Chính</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Tổng Số Nhân Sự Hiện Tại</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Thị Trường Chính</label>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" required>
+                <label for="name">Lĩnh Vực Hoạt Động</label>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-5">
+        <div class="col-md-6">
+            <h5 class="heading">Lãnh Đạo Của Công Ty</h5>
+        </div>
+        <form action="@Url.Action("CreateProduct")" class="col-md-6" method="post" enctype="multipart/form-data">
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Người Lãnh Đạo</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Chức Danh</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Số Điện Thoại</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Email</label>
+            </div>
+        </form>
+        <div class="col-md-6">
+            <h5 class="heading">Bộ Phận Marketing-Truyền Thông</h5>
+        </div>
+        <form class="col-md-6">
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Đại Diện</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Chức Danh</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Số Điện Thoại</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Email</label>
+            </div>
+        </form>
+        <div class="col-md-6">
+            <h5 class="heading">Bộ Phận Hành Chính Nhân Sự</h5>
+        </div>
+        <form class="col-md-6">
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Đại Diện</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Chức Danh</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Số Điện Thoại</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Email</label>
+            </div>
+        </form>
+        <div class="col-md-6">
+            <h5 class="heading">Bộ Phận Tài Chính/Kế Toán</h5>
+        </div>
+        <form class="col-md-6">
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Đại diện</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Chức Danh</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Số Điện Thoại</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="tax" required>
+                <label for="tax">Email</label>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="button-form">
+    <button class="button">Xác Nhận</button>
+    <button class="button">Huỷ</button>
+</div>
