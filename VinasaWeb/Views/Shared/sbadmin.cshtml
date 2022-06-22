@@ -64,23 +64,18 @@
             <!-- Divider -->
             <!-- Heading -->
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index","Account")">
+            <li class="nav-item" href="#"  data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Tài khoản</span>
                 </a>
-                @*<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Login Screens:</h6>
-                            <a class="collapse-item" href="@Url.Action("Login","Account")">Đăng nhập</a>
-                            <a class="collapse-item" href="@Url.Action("Register","Account")">Đăng ký</a>
-                            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                            <div class="collapse-divider"></div>
-                            <h6 class="collapse-header">Other Pages:</h6>
-                            <a class="collapse-item" href="404.html">404 Page</a>
-                            <a class="collapse-item" href="blank.html">Blank Page</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Account")">Hội Viên</a>
+                            <a class="collapse-item" href="@Url.Action("Index","AdminAccount")">Quản Trị</a>
                         </div>
-                    </div>*@
+                    </div>
             </li>
 
             <!-- Nav Item - Charts -->

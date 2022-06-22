@@ -1,0 +1,142 @@
+﻿
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/sbadmin.cshtml";
+}
+
+<style>
+    .card-bet {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .input-wrapper {
+        display: flex;
+        position: relative;
+        line-height: 14px;
+        margin: 20px 10px;
+    }
+
+
+    label {
+        color: #bbb;
+        font-size: 11px;
+        text-transform: uppercase;
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        top: 14px;
+        padding: 0 2px;
+        pointer-events: none;
+        background: white;
+        transition: transform 100ms ease;
+        transform: translateY(-20px);
+    }
+
+
+    input {
+        font-size: 10px;
+        color: #555;
+        outline: none;
+        border: 1px solid #bbb;
+        padding: 10px 20px;
+        border-radius: 20px;
+        width: 100%;
+        position: relative;
+    }
+
+
+        input:invalid + label {
+            transform: translateY(0);
+        }
+
+        input:focus {
+            border-color: #E7870F;
+        }
+
+            input:focus + label {
+                color: #E7870F;
+                transform: translateY(-20px);
+            }
+
+    .heading {
+        color: #051D65;
+    }
+
+    .form-control {
+        font-size: 15px;
+        color: #555;
+        outline: none;
+        border: 1px solid #bbb;
+        border-radius: 20px;
+        width: 400px;
+    }
+
+        .form-control:focus {
+            border-color: #E7870F;
+        }
+
+    .address:focus {
+        color: #E7870F;
+    }
+
+    .button {
+        height: 40px;
+        width: 150px;
+        margin: 10px 10px;
+        background: #F69928;
+        color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+
+    .button-form {
+        float: right;
+        margin-right: 70px;
+    }
+
+    .button:hover {
+        background-color: #051D65;
+    }
+</style>
+
+<div class="row">
+    <div class="col-6">
+        <h5 class="heading">Sửa Thông Tin Quản Trị</h5>
+        <form action="@Url.Action("CreateProduct")" class="form-field" method="post" enctype="multipart/form-data">
+            <div class="input-wrapper">
+                <input type="text" contenteditable="true" value="Giang Văn Thăng" required>
+                <label for="tax">Tên Hội Viên</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" contenteditable="true" value="thang.giang113vn@gmail.com" required>
+                <label>Email</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" contenteditable="true" value="0783626832" required>
+                <label for="name">Số Điện Thoại</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" contenteditable="true" value="Ban Quản Trị" required>
+
+                <label for="name">Phòng Ban</label>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+<div class="button-form">
+    <button class="button">Xác Nhận</button>
+    <button class="button" id="cancel">Huỷ</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $('#cancel').click(function () {
+        location.href = "@Url.Action("Index")";
+    })
+
+</script>
