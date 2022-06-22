@@ -30,6 +30,9 @@
         list-style-type: none;
         font-size: 18px
     }
+    #confirmResult {
+        display: none;
+    }
 </style>
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Hội Thảo</h1>
@@ -75,14 +78,15 @@
                         <td>Công Nghệ Thông Tin</td>
                         <td class="action" style="display:flex; justify-content:space-around; align-items:center">
                             <li class="action-item">
-                                <a href="" class="action-icon">
+                                <a href="@Url.Action("UpdateInfoM")" class="action-icon">
                                     <i class="fa-solid fa-pen-to-square icon"></i>
                                 </a>
                             </li>
                             <li class="action-item">
-                                <a href="" class="action-icon">
+                                <a href="" class="action-icon" id="confirmTrigger">
                                     <i class="fa-solid fa-trash-can icon"></i>
                                 </a>
+                                <p id="confirmResult"></p>
                             </li>
                             <li class="action-item">
                                 <a href="" class="action-icon">
@@ -115,6 +119,16 @@
         input.click();
 
     }
+
+    const button = document.getElementById('confirmTrigger');
+    const confirmResult = document.getElementById('confirmResult');
+    button.addEventListener('click', function (e) {
+        if (window.confirm('Do you confirm?')) {
+            confirmResult.innerText = 'Yes';
+        } else {
+            confirmResult.innerText = 'No';
+        }
+    });
 </script>
 
 
