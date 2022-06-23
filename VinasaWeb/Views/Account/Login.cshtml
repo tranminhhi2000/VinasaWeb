@@ -21,7 +21,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Chào mừng trở lại!</h1>
                                     </div>
                                     @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = " user form-horizontal", role = "form" }))
                                     {
@@ -31,11 +31,11 @@
                                           </div>*@
                                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                         <div class="form-group">
-                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-user", @placeholder = "Enter Email Address..." })
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-user", @placeholder = "Email Vinasa" })
                                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
-                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-user", @placeholder = "Password" })
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-user", @placeholder = "Mật khẩu" })
                                             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
@@ -46,17 +46,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        @*<a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>*@
                                         <div class="form-group">                                          
-                                                <input type="submit" value="Log in" class="btn btn-primary btn-user btn-block" />                                           
+                                                <input type="submit" value="Đăng nhập" class="btn btn-primary btn-user btn-block" />                                           
                                         </div>                                       
                                     }
                                     <hr>
                                  
                                     <div class="text-center">
-                                        <a class="small" href="@Url.Action("Register", "Account")">Create an Account!</a>
+                                        <a class="small" href="@Url.Action("Register", "Account")">Tạo tài khoản mới!</a>
                                     </div>
                                 </div>
                             </div>
@@ -69,52 +66,6 @@
         </div>
 
     </div>
-    @*<div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-            }
-        </section>
-    </div>*@
-    @*<div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>*@
 </div>
 
 @section Scripts {
