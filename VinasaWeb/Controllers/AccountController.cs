@@ -491,7 +491,7 @@ namespace VinasaWeb.Controllers
         {
             return View();
         }
-        public ActionResult ListAccount()
+        public ActionResult Info()
         {
             return View();
         }
