@@ -375,6 +375,8 @@
     <Content Include="Views\Seminar\ViewList.cshtml" />
     <Content Include="Views\Seminar\UpdateInfoM.cshtml" />
     <Content Include="Views\Seminar\UpdateInfoS.cshtml" />
+    <Content Include="Views\Seminar\DetailInfoSoM.cshtml" />
+    <Content Include="Views\Seminar\DetailInfoS.cshtml" />
     <None Include="Views\Shared\sbadmin.cshtml" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />

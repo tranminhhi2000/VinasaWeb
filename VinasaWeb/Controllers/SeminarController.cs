@@ -33,5 +33,15 @@ namespace VinasaWeb.Controllers
             return View();
 
         }
+
+        public ActionResult DetailInfoSoM()
+        {
+            return View();
+        }
+
+        public ActionResult DetailInfoS()
+        {
+            return View();
+        }
     }
 }

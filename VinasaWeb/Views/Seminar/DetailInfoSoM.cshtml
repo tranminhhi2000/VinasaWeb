@@ -100,54 +100,56 @@
         background-color: #051D65;
     }
 
+    .input-select{
+        width:500px;
+    }
     .select-region {
         width: 500px;
     }
 </style>
 
 <div class="container col-11 centerPage">
-    <h5 class="heading">Cập nhật Thông Tin Doanh Nghiệp Tham Gia Hội Thảo</h5>
+    <h5 class="heading">Thêm mới Hội Thảo</h5>
     <form class="form-field" method="post" enctype="multipart/form-data">
         <div class="input-wrapper">
-            <input type="text" id="tax" required>
+            <input type="text" id="tax" value="0315159393" readonly>
             <label for="tax">Mã số thuế</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Smart City" readonly>
             <label for="name">Tên Hội Thảo</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Công ty Cổ phần FPT " readonly>
             <label for="name">Tên Đơn Vị</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Trương Gia Bình" readonly>
             <label for="name">Tên Người Tham Dự</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Chủ tịch HĐQT " readonly>
             <label for="name">Chức Danh</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="email" required>
+            <input type="email" value="manhnt@vinasa.org.vn" readonly>
             <label for="name">Email</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="number" required>
+            <input type="number" value="0937688958" readonly>
             <label for="name">Di Động</label>
         </div>
 
-        <div class="input-wrapper">
+        <div class="input-wrapper input-select">
             <label class="address" for="name">Tỉnh Thành</label>
             <select class="form-control select-region" name="type">
-                <option value="none">Chọn Khu Vực</option>
-
+                <option value="">Chọn Khu Vực</option>
                 <option value="">HCM</option>
                 <option value="">HN</option>
                 <option value="">MT</option>
@@ -156,39 +158,38 @@
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Doanh nghiệp CNTT" readonly>
             <label for="name">Đơn Vị Chúng Tôi Là</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Công nghệ thông tin " readonly>
             <label for="name">Lĩnh Vực Hoạt Động</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Có" readonly>
             <label for="name">Đăng Ký Hội Thảo</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Có" readonly>
             <label for="name">Đăng Ký Business Matching</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Có" readonly>
             <label for="name">Đăng Ký Gian Hàng Triển Lãm</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Có" readonly>
             <label for="name">Đăng Ký Vé Tham Dự</label>
         </div>
 
     </form>
     <div class="button-form">
-        <button class="button">Xác Nhận</button>
-        <button class="button" id="cancel" onclick="goBack">Huỷ</button>
+        <button class="button" id="cancel" onclick="goBack">Quay Lại</button>
     </div>
 </div>
 

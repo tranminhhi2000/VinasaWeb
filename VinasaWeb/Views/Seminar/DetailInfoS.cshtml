@@ -43,7 +43,7 @@
         border: 1px solid #bbb;
         padding: 10px 20px;
         border-radius: 20px;
-        width:500px;
+        width:800px;
         position: relative;
     }
 
@@ -95,7 +95,7 @@
     }
 
     .button-form {
-        float: left;
+        float: right;
     }
 
     .button:hover{
@@ -105,26 +105,25 @@
 </style>
 
 <div class="container col-11 centerPage">
-    <h5 class="heading">Thêm mới Hội Thảo</h5>
+    <h5 class="heading">Cập nhật Thông Tin Hội Thảo</h5>
     <form class="form-field" method="post" enctype="multipart/form-data">
         <div class="input-wrapper">
-            <input type="text" id="tax" required>
+            <input type="text" value="Hội nghị kết nối đầu tư tổ chức tại TP. Hồ Chí Minh: chủ đề THÚC ĐẨY ĐẦU TƯ VÀ PHÁT TRIỂN HỆ SINH THÁI TÀI CHÍNH SỐ" id="tax" readonly>
             <label for="tax">Tên Hội Thảo</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="9:00 - 17:00 ngày 28/06/2022 (Thứ 3)" readonly>
             <label for="name">Thời Gian Diễn Ra</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
+            <input type="text" value="Sihub, 273 Điện Biên Phủ, Phường Võ Thị Sáu, Quận 3, TP. HCM" readonly>
             <label for="name">Địa Điểm Diễn Ra</label>
         </div>
     </form>
     <div class="button-form">
-        <button class="button">Xác Nhận</button>
-        <button class="button" id="cancel">Huỷ</button>
+        <button class="button" id="cancel">Quay Lại</button>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

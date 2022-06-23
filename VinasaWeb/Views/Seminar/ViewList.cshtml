@@ -35,6 +35,12 @@
     #confirmResult{
         display: none;
     }
+
+    .action-list, .action-list:hover {
+        text-decoration: none;
+        color: #999;
+    }
+
 </style>
 <!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Hội Thảo</h1>
@@ -55,7 +61,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th><a>Tên Hội Nghị</a></th>
+                        <th>Tên Hội Nghị</th>
                         <th>Thời Gian Diễn Ra</th>
                         <th>Địa Điểm Diễn Ra</th>
                         <th>Chức Năng</th>
@@ -63,12 +69,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Thành Phố Smart</td>
+                        <td><a class="action-list" href="@Url.Action("Index")">Hội nghị kết nối đầu tư tổ chức tại TP. Hồ Chí Minh: chủ đề THÚC ĐẨY ĐẦU TƯ VÀ PHÁT TRIỂN HỆ SINH THÁI TÀI CHÍNH SỐ</a></td>
                         <td>
-                            Công ty Cổ phần FPT
+                            9:00 - 17:00 ngày 28/06/2022 (Thứ 3)
                         </td>
                         <td>
-                            0937688958
+                            Sihub, 273 Điện Biên Phủ, Phường Võ Thị Sáu, Quận 3, TP. HCM
                         </td>
                         <td class="action" style=" display:flex; justify-content:space-around; align-items:center">
                             <li class="action-item">
@@ -77,20 +83,40 @@
                                 </a>
                             </li>
                             <li class="action-item">
-                                <a href="" class="action-icon" id="confirmTrigger">
+                                <a href="" class="action-icon" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                     <i class="fa-solid fa-trash-can icon"></i>
                                 </a>
                                 <p id="confirmResult"></p>
                             </li>
                             <li class="action-item" id="list">
-                                <a href="@Url.Action("Index")" class="action-icon" >
-                                    <i class="fa-solid fa-circle-info icon" ></i>
+                                <a href="@Url.Action("DetailInfoS")" class="action-icon">
+                                    <i class="fa-solid fa-circle-info icon"></i>
                                 </a>
                             </li>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Xoá Hội Thảo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Bạn có chắc chắn xoá?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                            <button type="button" class="btn btn-primary" style=" background: #F69928; ">Đồng Ý</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -105,12 +131,14 @@
     const button = document.getElementById('confirmTrigger');
     const confirmResult = document.getElementById('confirmResult');
     button.addEventListener('click', function (e) {
-        if (window.confirm('Do you confirm?')) {
+        if (window.confirm('Bạn có chắc chắn xoá?')) {
             confirmResult.innerText = 'Yes';
         } else {
             confirmResult.innerText = 'No';
         }
     });
+
+
 </script>
 
 
