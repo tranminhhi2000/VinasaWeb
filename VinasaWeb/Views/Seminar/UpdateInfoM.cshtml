@@ -5,146 +5,48 @@
     Layout = "~/Views/Shared/sbadmin.cshtml";
 }
 
-<style>
-    .form-field {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
 
-    .input-wrapper {
-        display: flex;
-        position: relative;
-        line-height: 14px;
-        margin: 20px 10px;
-    }
-
-
-    label {
-        color: #bbb;
-        font-size: 11px;
-        text-transform: uppercase;
-        position: absolute;
-        z-index: 2;
-        left: 20px;
-        top: 14px;
-        padding: 0 2px;
-        pointer-events: none;
-        background: white;
-        transition: transform 100ms ease;
-        transform: translateY(-20px);
-    }
-
-
-    input {
-        font-size: 15px;
-        color: #555;
-        outline: none;
-        border: 1px solid #bbb;
-        padding: 10px 20px;
-        border-radius: 20px;
-        width: 500px;
-        position: relative;
-    }
-
-
-        input:invalid + label {
-            transform: translateY(0);
-        }
-
-        input:focus {
-            border-color: #E7870F;
-        }
-
-            input:focus + label {
-                color: #E7870F;
-                transform: translateY(-20px);
-            }
-
-    .heading {
-        color: #051D65;
-    }
-
-    .form-control {
-        font-size: 15px;
-        color: #555;
-        outline: none;
-        border: 1px solid #bbb;
-        border-radius: 20px;
-        width: 400px;
-    }
-
-        .form-control:focus {
-            border-color: #E7870F;
-        }
-
-    .address:focus {
-        color: #E7870F;
-    }
-
-    .button {
-        height: 40px;
-        width: 150px;
-        margin: 10px 10px;
-        background: #F69928;
-        color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-    }
-
-    .button-form {
-        float: right;
-    }
-
-    .button:hover {
-        background-color: #051D65;
-    }
-
-    .select-region {
-        width: 500px;
-    }
-</style>
 
 <div class="container col-11 centerPage">
     <h5 class="heading">Cập nhật Thông Tin Doanh Nghiệp Tham Gia Hội Thảo</h5>
-    <form class="form-field" method="post" enctype="multipart/form-data">
+    <form class="form-field form-inputs" method="post" enctype="multipart/form-data">
         <div class="input-wrapper">
-            <input type="text" id="tax" required>
-            <label for="tax">Mã số thuế</label>
+            <input class="ip-form" type="text" id="tax" required>
+            <label class="lb-form" for="tax">Mã số thuế</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Tên Hội Thảo</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Tên Hội Thảo</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Tên Đơn Vị</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Tên Đơn Vị</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Tên Người Tham Dự</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Tên Người Tham Dự</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Chức Danh</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Chức Danh</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="email" required>
-            <label for="name">Email</label>
+            <input class="ip-form" type="email" required>
+            <label class="lb-form" for="name">Email</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="number" required>
-            <label for="name">Di Động</label>
+            <input class="ip-form" type="number" required>
+            <label class="lb-form" for="name">Di Động</label>
         </div>
 
         <div class="input-wrapper">
-            <label class="address" for="name">Tỉnh Thành</label>
+            <label class="lb-form" class="address" for="name">Tỉnh Thành</label>
             <select class="form-control select-region" name="type">
                 <option value="none">Chọn Khu Vực</option>
 
@@ -156,39 +58,39 @@
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Đơn Vị Chúng Tôi Là</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Đơn Vị Chúng Tôi Là</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Lĩnh Vực Hoạt Động</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Lĩnh Vực Hoạt Động</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Đăng Ký Hội Thảo</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Đăng Ký Hội Thảo</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Đăng Ký Business Matching</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Đăng Ký Business Matching</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Đăng Ký Gian Hàng Triển Lãm</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Đăng Ký Gian Hàng Triển Lãm</label>
         </div>
 
         <div class="input-wrapper">
-            <input type="text" required>
-            <label for="name">Đăng Ký Vé Tham Dự</label>
+            <input class="ip-form" type="text" required>
+            <label class="lb-form" for="name">Đăng Ký Vé Tham Dự</label>
         </div>
 
     </form>
     <div class="button-form">
-        <button class="button">Xác Nhận</button>
-        <button class="button" id="cancel" onclick="goBack">Huỷ</button>
+        <button class="button-lc">Xác Nhận</button>
+        <button class="button-lc" id="cancel" onclick="goBack">Huỷ</button>
     </div>
 </div>
 

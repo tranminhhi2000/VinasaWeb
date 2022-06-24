@@ -54,6 +54,35 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.button-lc {
+    height: 40px;
+    width: 200px;
+    margin: 10px 10px;
+    background: #F69928;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+    .button-lc:hover {
+        background-color: #051D65;
+    }
+
+.icon {
+    cursor: pointer;
+    color: #F69928;
+}
+
+.action-icon:hover {
+    color: #051D65;
+}
+
+.action-item {
+    list-style-type: none;
+    font-size: 18px
+}
+
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
