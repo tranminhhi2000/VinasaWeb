@@ -54,6 +54,35 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.button-lc {
+    height: 40px;
+    width: 200px;
+    margin: 10px 10px;
+    background: #F69928;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+    .button-lc:hover {
+        background-color: #051D65;
+    }
+
+.icon {
+    cursor: pointer;
+    color: #F69928;
+}
+
+.action-icon:hover {
+    color: #051D65;
+}
+
+.action-item {
+    list-style-type: none;
+    font-size: 18px
+}
+
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
@@ -1486,6 +1515,7 @@ pre code {
   width: 100%;
   margin-bottom: 1rem;
   color: #858796;
+  overflow-x: auto;
 }
 
 .table th,
@@ -4517,6 +4547,11 @@ input[type="button"].btn-block {
   border-bottom-left-radius: calc(0.35rem - 1px);
 }
 
+.card-header .left-content .button-lc:hover {
+    background-color: #051D65;
+}
+
+
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
   border-top: 0;
@@ -4634,8 +4669,35 @@ input[type="button"].btn-block {
   margin-bottom: 0.75rem;
 }
 
+.left-content .button {
+    background: #F69928;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/*.action {
+    display: flex !important;
+    justify-content: space-around;
+}
+
+.action > i {
+color: #000;
+}
+
+td > .action-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    list-style: none;
+    text-align: center;
+    font-size: 15px;
+    list-style-type: none !important;
+}*/
 @media (min-width: 576px) {
-  .card-group {
+    .card-group {
     display: flex;
     flex-flow: row wrap;
   }
@@ -9592,11 +9654,11 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #4e73df !important;
+    color: #19315D;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #224abe !important;
+    color: #19315D;
 }
 
 .text-secondary {
