@@ -32,13 +32,7 @@
 
 <div class="input-wrapper">
     @Html.LabelFor(model => model.ProvinceId, new { @class = "lb-form" })
-    <select name="ProvinceId" class="form-control select-region">
-        <option value="none">Chọn Khu Vực</option>
-        <option value="">HCM</option>
-        <option value="">HN</option>
-        <option value="">MT</option>
-
-    </select>
+    @Html.DropDownList("ProvinceId", (IEnumerable<SelectListItem>)ViewBag.Provinces, new { @class = "form-control select-region" })
 </div>
 
 <div class="input-wrapper">

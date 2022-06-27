@@ -33,5 +33,7 @@ namespace VinasaWeb.Models
         public System.Data.Entity.DbSet<VinasaWeb.Models.Seminar> Seminars { get; set; }
 
         public System.Data.Entity.DbSet<VinasaWeb.Models.SeminarParticipant> SeminarParticipants { get; set; }
+
+        public System.Data.Entity.DbSet<VinasaWeb.Models.Province> Provinces { get; set; }
     }
 }

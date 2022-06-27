@@ -42,6 +42,7 @@ namespace VinasaWeb.Controllers
         // GET: SeminarParticipants/Create
         public ActionResult Create()
         {
+            ViewBag.Provinces = new SelectList(_db.Provinces.ToList(), "ID", "Title");
             return View();
         }
 
@@ -74,6 +75,8 @@ namespace VinasaWeb.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Provinces = new SelectList(_db.Provinces.ToList(), "ID", "Title");
+
             return View(seminarParticipant);
         }
 

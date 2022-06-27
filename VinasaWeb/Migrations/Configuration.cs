@@ -68,5 +68,33 @@
             );
             context.SaveChanges();
         }
+
+        private static void ProviceInitialize(ApplicationDbContext context)
+        {
+            if (context.SeminarParticipants.Any())
+            {
+                return;   // DB has been seeded
+            }
+
+            context.Provinces.AddOrUpdate(
+                new Province
+                {
+                    Title = "HCM"
+                }
+            );
+            context.Provinces.AddOrUpdate(
+                new Province
+                {
+                    Title = "HN"
+                }
+            );
+            context.Provinces.AddOrUpdate(
+                new Province
+                {
+                    Title = "DN"
+                }
+            );
+            context.SaveChanges();
+        }
     }
 }

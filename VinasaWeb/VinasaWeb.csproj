@@ -205,6 +205,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\SeminarParticipantsController.cs" />
     <Compile Include="Controllers\SeminarsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,10 +215,19 @@
     <Compile Include="Migrations\202206270345593_InitialCreate.designer.cs">
       <DependentUpon>202206270345593_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206270929042_Init.cs" />
+    <Compile Include="Migrations\202206270929042_Init.designer.cs">
+      <DependentUpon>202206270929042_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206270931241_Init1.cs" />
+    <Compile Include="Migrations\202206270931241_Init1.designer.cs">
+      <DependentUpon>202206270931241_Init1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Province.cs" />
     <Compile Include="Models\Seminar.cs" />
     <Compile Include="Models\SeminarParticipant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -424,6 +434,11 @@
     <Content Include="Views\SeminarParticipants\_CreateOrUpdate.cshtml" />
     <Content Include="Views\SeminarParticipants\_DeleteSelected.cshtml" />
     <Content Include="Views\SeminarParticipants\_List.cshtml" />
+    <Content Include="Views\Provinces\Create.cshtml" />
+    <Content Include="Views\Provinces\Delete.cshtml" />
+    <Content Include="Views\Provinces\Details.cshtml" />
+    <Content Include="Views\Provinces\Edit.cshtml" />
+    <Content Include="Views\Provinces\Index.cshtml" />
     <None Include="Views\Shared\sbadmin.cshtml" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
@@ -2152,6 +2167,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202206270345593_InitialCreate.resx">
       <DependentUpon>202206270345593_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206270929042_Init.resx">
+      <DependentUpon>202206270929042_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206270931241_Init1.resx">
+      <DependentUpon>202206270931241_Init1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
