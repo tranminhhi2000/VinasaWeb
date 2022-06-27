@@ -29,5 +29,9 @@ namespace VinasaWeb.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<VinasaWeb.Models.Seminar> Seminars { get; set; }
+
+        public System.Data.Entity.DbSet<VinasaWeb.Models.SeminarParticipant> SeminarParticipants { get; set; }
     }
 }
